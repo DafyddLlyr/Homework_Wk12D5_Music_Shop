@@ -11,7 +11,7 @@ public class PianoTest {
 
     @Before
     public void setup() {
-        piano = new Piano(Family.KEYBOARD, "Black", "Wood", "Mickson", "Canva", 110);
+        piano = new Piano(Family.KEYBOARD, "Black", "Wood", "Mickson", "Canva", 20, 30, 110);
     }
 
     @Test

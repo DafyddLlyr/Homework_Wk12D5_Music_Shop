@@ -11,7 +11,7 @@ public class TrumpetTest {
 
     @Before
     public void setup() {
-        trumpet = new Trumpet(Family.BRASS, "Gold", "Brass", "Dixon", "Ruby", 4);
+        trumpet = new Trumpet(Family.BRASS, "Gold", "Brass", "Dixon", "Ruby", 100, 110, 4);
     }
 
     @Test
