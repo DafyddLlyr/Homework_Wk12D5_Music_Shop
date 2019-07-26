@@ -7,11 +7,11 @@ import static org.junit.Assert.assertEquals;
 
 public class PianoTest {
 
-    Piano piano;
+    private Piano piano;
 
     @Before
     public void setup() {
-        piano = new Piano(Family.KEYBOARD, "Black", "Wood", "Mickson", "Canva", 20, 30, 110);
+        piano = new Piano("Black", "Wood", "Mickson", "Canva", 20, 30, 110);
     }
 
     @Test

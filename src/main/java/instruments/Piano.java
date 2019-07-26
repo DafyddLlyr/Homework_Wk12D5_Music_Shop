@@ -4,9 +4,10 @@ public class Piano extends Instrument {
 
     private int heightInCentimeters;
 
-    public Piano(Family family, String color, String material, String make, String model, int buyingPrice, int sellingPrice, int heightInCentimeters) {
-        super(family, color, material, make, model, buyingPrice, sellingPrice);
+    public Piano(String color, String material, String make, String model, int buyingPrice, int sellingPrice, int heightInCentimeters) {
+        super(color, material, make, model, buyingPrice, sellingPrice);
         this.heightInCentimeters = heightInCentimeters;
+        this.family = Family.KEYBOARD;
     }
 
     public int getHeight() {
@@ -16,4 +17,5 @@ public class Piano extends Instrument {
     public String play() {
         return "Plink plonk!";
     }
+
 }

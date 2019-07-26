@@ -7,11 +7,11 @@ import static org.junit.Assert.assertEquals;
 
 public class GuitarTest {
 
-    Guitar guitar;
+    private Guitar guitar;
 
     @Before
     public void setup() {
-        guitar = new Guitar(Family.STRING, "Blue", "Wood", "Fender", "DX120", 100, 150, 5);
+        guitar = new Guitar("Blue", "Wood", "Fender", "DX120", 100, 150, 5);
     }
 
     @Test

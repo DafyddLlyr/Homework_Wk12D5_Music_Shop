@@ -4,16 +4,18 @@ public class Clarinet extends Instrument {
 
     private boolean hasCase;
 
-    public Clarinet(Family family, String color, String material, String make, String model, int buyingPrice, int sellingPrice, boolean hasCase) {
-        super(family, color, material, make, model, buyingPrice, sellingPrice);
+    public Clarinet(String color, String material, String make, String model, int buyingPrice, int sellingPrice, boolean hasCase) {
+        super(color, material, make, model, buyingPrice, sellingPrice);
         this.hasCase = hasCase;
+        this.family = Family.WOODWIND;
     }
 
     public boolean hasCase() {
-        return hasCase;
+        return this.hasCase;
     }
 
     public String play() {
         return "Weee wooo!";
     }
+
 }

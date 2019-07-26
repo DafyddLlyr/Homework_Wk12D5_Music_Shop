@@ -8,11 +8,11 @@ import static org.junit.Assert.assertTrue;
 
 public class ClarinetTest {
 
-    Clarinet clarinet;
+    private Clarinet clarinet;
 
     @Before
     public void setup() {
-        clarinet = new Clarinet(Family.WOODWIND, "Black", "Wood", "Smiths", "A200", 10, 20, true);
+        clarinet = new Clarinet("Black", "Wood", "Smiths", "A200", 10, 20, true);
     }
 
     @Test

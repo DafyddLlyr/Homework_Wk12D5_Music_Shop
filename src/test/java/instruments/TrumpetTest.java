@@ -7,11 +7,11 @@ import static org.junit.Assert.assertEquals;
 
 public class TrumpetTest {
 
-    Trumpet trumpet;
+    private Trumpet trumpet;
 
     @Before
     public void setup() {
-        trumpet = new Trumpet(Family.BRASS, "Gold", "Brass", "Dixon", "Ruby", 100, 110, 4);
+        trumpet = new Trumpet("Gold", "Brass", "Dixon", "Ruby", 100, 110, 4);
     }
 
     @Test

@@ -4,9 +4,10 @@ public class Trumpet extends Instrument {
 
     private int numberOfValves;
 
-    public Trumpet(Family family, String color, String material, String make, String model, int buyingPrice, int sellingPrice, int numberOfValves) {
-        super(family, color, material, make, model, buyingPrice, sellingPrice);
+    public Trumpet(String color, String material, String make, String model, int buyingPrice, int sellingPrice, int numberOfValves) {
+        super(color, material, make, model, buyingPrice, sellingPrice);
         this.numberOfValves = numberOfValves;
+        this.family = Family.BRASS;
     }
 
     public int getNumberOfValves() {

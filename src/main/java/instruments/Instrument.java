@@ -5,7 +5,7 @@ import interfaces.ISell;
 
 public abstract class Instrument implements IPlay, ISell {
 
-    private Family family;
+    protected Family family;
     private String color;
     private String material;
     private String make;
@@ -13,14 +13,14 @@ public abstract class Instrument implements IPlay, ISell {
     private int buyingPrice;
     private int sellingPrice;
 
-    public Instrument(Family family, String color, String material, String make, String model, int buyingPrice, int sellingPrice) {
-        this.family = family;
+    public Instrument(String color, String material, String make, String model, int buyingPrice, int sellingPrice) {
         this.color = color;
         this.material = material;
         this.make = make;
         this.model = model;
         this.buyingPrice = buyingPrice;
         this.sellingPrice = sellingPrice;
+        this.family = null;
     }
 
     public Family getFamily() {
