@@ -1,4 +1,10 @@
+import accessories.GuitarString;
+import books.Book;
+import books.Category;
+import instruments.Clarinet;
 import instruments.Guitar;
+import instruments.Piano;
+import instruments.Trumpet;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,8 +13,8 @@ import static org.junit.Assert.assertTrue;
 
 public class MusicShopTest {
 
-    MusicShop shop;
-    Guitar guitar;
+    private MusicShop shop;
+    private Guitar guitar;
 
     @Before
     public void setup() {
@@ -46,12 +52,27 @@ public class MusicShopTest {
         assertEquals(0, shop.stockCount());
     }
 
-
     @Test
     public void canCalculateProfitOnSingleStock() {
+        shop.addItem(guitar);
+        assertEquals(10, shop.calculateProfit());
     }
 
     @Test
     public void canCalculateProfitOnComplexStock() {
+        GuitarString guitarString = new GuitarString("Extra Special Strings", 2, 5, 4);
+        Book book = new Book("Guitar for Dummies", "Tim Matthews", Category.BEGINNER_LESSONS, 10, 20);
+        Clarinet clarinet = new Clarinet("Black", "Wood", "Smiths", "A200", 10, 20, true);
+        Piano piano = new Piano("Black", "Wood", "Mickson", "Canva", 20, 30, 110);
+        Trumpet trumpet = new Trumpet("Gold", "Brass", "Dixon", "Ruby", 100, 110, 4);
+
+        shop.addItem(guitar);
+        shop.addItem(book);
+        shop.addItem(clarinet);
+        shop.addItem(piano);
+        shop.addItem(trumpet);
+        shop.addItem(guitarString);
+
+        assertEquals(53, shop.calculateProfit());
     }
 }

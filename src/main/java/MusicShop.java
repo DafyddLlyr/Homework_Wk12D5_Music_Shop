@@ -36,4 +36,11 @@ public class MusicShop {
         this.stock.remove(item);
     }
 
+    public int calculateProfit() {
+        int profit = 0;
+        for(ISell item : this.stock) {
+            profit += item.calculateMarkup();
+        }
+        return profit;
+    }
 }
